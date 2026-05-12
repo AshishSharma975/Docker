@@ -1,0 +1,6 @@
+1 - create a basic express server
+2 - create docker file
+3 -  write below things in docker file
+    node:20 alpine = combination of node:20 + linux OS
+    workdir = /app
+    copy package.json package-lock.json /app/
