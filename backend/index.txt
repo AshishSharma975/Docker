@@ -4,3 +4,15 @@
     node:20 alpine = combination of node:20 + linux OS
     workdir = /app
     copy package.json package-lock.json /app/
+    run npm install
+    copy server.js /app/
+    expose 3000
+    CMD ["node", "server.js"]
+4 - write command to build and run
+    docker build -t backend .
+    docker run -p 3000:3000 backend
+
+    cd Backend
+docker build . -t cohort_2
+
+pahse 1 completed 
