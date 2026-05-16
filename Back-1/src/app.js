@@ -8,8 +8,9 @@ app.get("/",(req,res) => {
 })
 
 app.get("/api/data",(req,res)=>{
-    return res.json({message:"Hello from backend"})
+    return res.json({message:"Hello from ash backend"})
 })
+
 
 
 export default app

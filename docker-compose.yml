@@ -1,0 +1,9 @@
+services:
+  backend:
+    build: ./Back-1
+
+    ports:
+      - "5000:3000"
+
+    volumes:
+      - ./Back-1:/app
