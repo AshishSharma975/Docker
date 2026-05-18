@@ -1,5 +1,6 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors"
 
 const app = express();
 
@@ -20,10 +21,11 @@ app.get("/api/users", (req, res) => {
         { id: 1, name: "John" },
         { id: 2, name: "Doe" },
         { id: 3, name: "Alice" },
+        
     ];
     res.json(user);
 })
-    
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
