@@ -7,6 +7,7 @@ const app = express();
 //Middleware
 app.use(morgan("dev"));
 app.use(express.json());
+app.use(express.static('public'))
 
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to the NodeJS + Docker Compose API" });
@@ -26,6 +27,9 @@ app.get("/api/users", (req, res) => {
     res.json(user);
 })
 
+app.get("*name", (req, res) => {
+    res.sendFile("public/index.html", { root: __dirname })
+})
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
