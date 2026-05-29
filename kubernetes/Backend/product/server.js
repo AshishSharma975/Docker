@@ -1,4 +1,4 @@
-import express from express
+import express from "express"
 import morgan from "morgan"
 import axios from "axios"
 
@@ -7,8 +7,8 @@ const app = express();
 app.use(morgan("dev"))
 
 
-app.get("/", async (req, res) => {
-   const response = await axios.get("http://main-server-service:3000")
+app.get("/api/product", async (req, res) => {
+const response = await axios.get("http://main-server-service")
    res.status(200).json({
     message: "ok from product server",
     data: response.data
